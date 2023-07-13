@@ -40,8 +40,8 @@
             this.labelplayer = new System.Windows.Forms.Label();
             this.labeltimer = new System.Windows.Forms.Label();
             this.labelcopylight = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelobstacle = new System.Windows.Forms.Label();
+            this.labelItem = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -124,12 +124,14 @@
             // labelplayer
             // 
             this.labelplayer.AutoSize = true;
-            this.labelplayer.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelplayer.BackColor = System.Drawing.SystemColors.Control;
+            this.labelplayer.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelplayer.Location = new System.Drawing.Point(96, 313);
             this.labelplayer.Name = "labelplayer";
-            this.labelplayer.Size = new System.Drawing.Size(81, 29);
+            this.labelplayer.Size = new System.Drawing.Size(54, 19);
             this.labelplayer.TabIndex = 7;
             this.labelplayer.Text = "( ;∀;)";
+            this.labelplayer.Click += new System.EventHandler(this.labelplayer_Click);
             // 
             // labeltimer
             // 
@@ -150,33 +152,33 @@
             this.labelcopylight.TabIndex = 9;
             this.labelcopylight.Text = "(C) 2023 すぎもとなおき";
             // 
-            // label1
+            // labelobstacle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(406, 330);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 24);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "◇";
+            this.labelobstacle.AutoSize = true;
+            this.labelobstacle.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelobstacle.Location = new System.Drawing.Point(406, 330);
+            this.labelobstacle.Name = "labelobstacle";
+            this.labelobstacle.Size = new System.Drawing.Size(34, 24);
+            this.labelobstacle.TabIndex = 10;
+            this.labelobstacle.Text = "◇";
             // 
-            // label2
+            // labelItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(341, 360);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 24);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "★";
+            this.labelItem.AutoSize = true;
+            this.labelItem.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelItem.Location = new System.Drawing.Point(341, 360);
+            this.labelItem.Name = "labelItem";
+            this.labelItem.Size = new System.Drawing.Size(34, 24);
+            this.labelItem.TabIndex = 11;
+            this.labelItem.Text = "★";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelItem);
+            this.Controls.Add(this.labelobstacle);
             this.Controls.Add(this.labelcopylight);
             this.Controls.Add(this.labeltimer);
             this.Controls.Add(this.labelplayer);
@@ -208,8 +210,8 @@
         private System.Windows.Forms.Label labelplayer;
         private System.Windows.Forms.Label labeltimer;
         private System.Windows.Forms.Label labelcopylight;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelobstacle;
+        private System.Windows.Forms.Label labelItem;
     }
 }
 
