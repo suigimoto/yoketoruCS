@@ -227,12 +227,14 @@ namespace yoketoruCS
                     labelgameover.Visible = true;
                     buttontitle.Visible = true;
                     labelhighscore.Visible = true;
+                    HighScore();
                     break;
 
                 case State.Clear:
                     labelclear.Visible = true;
                     buttontitle.Visible = true;
                     labelhighscore.Visible= true;
+                    HighScore();
                     break;
             }
             }
@@ -243,6 +245,12 @@ namespace yoketoruCS
                 chrLabels[i].Left = random.Next(ClientSize.Width - chrLabels[i].Width);
                 chrLabels[i].Top = random.Next(ClientSize.Height - chrLabels[i].Height);
             }
+        }
+        
+        void HighScore()
+        {
+            highscore = Math.Max(highscore, score);
+            labelhighscore.Text = $"High Score: {highscore:00000}";
         }
 
         void AddScore(int point)
